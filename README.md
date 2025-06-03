@@ -1,12 +1,13 @@
 # Steam 状态监控 AstrBot 插件
 
-本插件可定时监控指定Steam玩家的在线与游戏状态，并在状态变更时推送通知。
+本插件是为AstrBot编写的，可定时监控指定Steam玩家的在线与游戏状态，并在状态变更时推送通知。
 
 
 ## 快速上手
-1. 在配置中填写Steam Web API
-2. 使用 `/steam addid [SteamID]`指令，或在配置中填写需要监控的对象
-3. 使用 `/steam on`指令开启监控 
+1. 将插件放置在`\AstrBot\data\plugins`目录下
+2. 在AstrBot网页后台的配置中填写（[Steam Web API](https://steamcommunity.com/dev/apikey)）
+3. 使用 `/steam addid [SteamID]`指令，或在配置中添加需要监控的64位Steam玩家ID
+4. 使用 `/steam on`指令开启监控 
 
 
 ## 详细说明
@@ -15,7 +16,7 @@
    - 编辑 `config.json`，填写你的 Steam Web API Key 及需要监控的 SteamID 列表。
 
 2. **配置参数说明**
-   - `steam_api_key`：你的 Steam Web API Key（[获取地址](https://steamcommunity.com/dev/apikey)）
+   - `steam_api_key`：你的（[ Steam Web API Key](https://steamcommunity.com/dev/apikey)）
    - `steam_ids`：要监控的 SteamID（64位数字字符串），可填写多个
    - `poll_interval_sec`：轮询间隔（秒），默认60秒
    - `retry_times`：API请求失败时的重试次数
