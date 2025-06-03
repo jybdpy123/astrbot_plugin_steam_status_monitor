@@ -13,7 +13,7 @@
 ## 详细说明
 1. **填写配置**
    - 复制本目录到 AstrBot 的 `plugins/` 目录下。
-   - 编辑 `config.json`，填写你的 Steam Web API Key 及需要监控的 SteamID 列表。
+   - 在AstrBot网页后台的配置中填写你的 Steam Web API Key 及需要监控的 SteamID 列表。
 
 2. **配置参数说明**
    - `steam_api_key`：你的（[ Steam Web API Key](https://steamcommunity.com/dev/apikey)）
