@@ -47,6 +47,11 @@ class SteamStatusMonitor(Star):
         self.RETRY_TIMES = self.config.get('retry_times', 3)  # 新增：重试次数
         self.GROUP_ID = self.config.get('notify_group_id', None)
         self.game_log = GameLogManager()  # 新增：游戏日志管理器
+        # 如果配置了组ID 直接置为启动 并开启线程
+        if self.GROUP_ID:
+            self.running = True
+            self.notify_session = self.GROUP_ID
+            asyncio.create_task(self.poll_loop())
         # 启动保活心跳任务（每30分钟调用一次 get_status）
         asyncio.create_task(self.keep_alive_task())
 
