@@ -1,4 +1,4 @@
-from astrbot.api.star import Star, register, Context
+from astrbot.api.star import Star, register, Context, AstrBotConfig
 from astrbot.api import logger
 from astrbot.api.event import filter, AstrMessageEvent
 from astrbot.api.event import MessageChain
@@ -21,7 +21,7 @@ from .steam_list import handle_steam_list  # 新增导入
     "https://github.com/jybdpy123/astrbot_plugin_steam_status_monitor"
 )
 class SteamStatusMonitor(Star):
-    def __init__(self, context: Context, config):
+    def __init__(self, context: Context, config: AstrBotConfig):
         super().__init__(context)
         self.context = context
         self.last_states = {}
