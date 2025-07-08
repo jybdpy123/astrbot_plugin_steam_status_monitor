@@ -14,11 +14,11 @@ from .game_log import GameLogManager, handle_steam_log  # 新增导入
 from .steam_list import handle_steam_list  # 新增导入
 
 @register(
-    "steam_status_monitor",
-    "Maoer",
+    "steam_status_monitor_test",
+    "jybdpy123",
     "Steam状态监控插件",
-    "1.0.0",
-    "https://github.com/Maoer233/steam_status_monitor"
+    "1.0.1",
+    "https://github.com/jybdpy123/astrbot_plugin_steam_status_monitor"
 )
 class SteamStatusMonitor(Star):
     def __init__(self, context: Context, config=None):
