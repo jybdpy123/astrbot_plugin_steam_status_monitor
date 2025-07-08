@@ -17,11 +17,11 @@ from .steam_list import handle_steam_list  # 新增导入
     "steam_status_monitor_test",
     "jybdpy123",
     "Steam状态监控插件",
-    "1.0.1",
+    "1.0.2",
     "https://github.com/jybdpy123/astrbot_plugin_steam_status_monitor"
 )
 class SteamStatusMonitor(Star):
-    def __init__(self, context: Context, config=None):
+    def __init__(self, context: Context, config: AstrBotConfig):
         super().__init__(context)
         self.context = context
         self.last_states = {}
@@ -31,6 +31,7 @@ class SteamStatusMonitor(Star):
         self._game_name_cache = {}
         # 统一使用 AstrBot 配置系统
         self.config = config or {}
+        logger.info(config)
         # 兼容旧逻辑，若 config 为空则尝试读取 config.json（可选，建议后续移除）
         if not self.config:
             try:
