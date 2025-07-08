@@ -1,5 +1,6 @@
-from astrbot.api.star import Star, register, Context, AstrBotConfig
+from astrbot.api.star import Star, register, Context
 from astrbot.api import logger
+from astrbot.api import AstrBotConfig
 from astrbot.api.event import filter, AstrMessageEvent
 from astrbot.api.event import MessageChain
 from astrbot.api.message_components import Plain
