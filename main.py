@@ -21,7 +21,7 @@ from .steam_list import handle_steam_list  # 新增导入
     "https://github.com/jybdpy123/astrbot_plugin_steam_status_monitor"
 )
 class SteamStatusMonitor(Star):
-    def __init__(self, context: Context, config: AstrBotConfig):
+    def __init__(self, context: Context, config):
         super().__init__(context)
         self.context = context
         self.last_states = {}
